@@ -1,0 +1,22 @@
+Program SistemKasir
+
+READ AND WRITE "inisiator_perulangan" with number
+READ AND WRITE "total_harga" with number
+READ AND WRITE "harga_jenis_barang_saat_ini" with number
+READ AND WRITE "banyak_jenis_barang_saat_ini" with number
+READ AND WRITE "banyak_jenis_barang" with number
+
+STORE "inisiator_perulangan" with 0
+STORE "total_harga" with 0
+STORE "harga_jenis_barang_saat_ini" with 0
+STORE "banyak_jenis_barang_saat_ini" with 0
+
+INPUT "banyak_jenis_barang"
+
+WHILE "inisiator_perulangan" < "banyak_jenis_barang"
+  INPUT "harga_jenis_barang_saat_ini"
+  INPUT "banyak_jenis_barang_saat_ini"
+  STORE "total_harga" with "total_harga" plus "harga_jenis_barang_saat_ini" times "banyak_jenis_barang_saat_ini"
+  STORE "inisiator_perulangan" with "inisiator_perulangan" plus 1
+
+PRINT "total_harga"
